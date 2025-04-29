@@ -1,7 +1,7 @@
 body {
             margin: 0;
             font-family: 'Cairo', 'Amiri', 'Baloo Bhaijaan 2', 'Arial', sans-serif;
-            background: linear-gradient(135deg, #fffff 0%, #32e0e0 100%);
+    background: #ffffff;
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
@@ -20,7 +20,7 @@ body {
     font-family: 'Cairo', 'Baloo Bhaijaan 2', 'Amiri', 'Arial', sans-serif;
             font-family: 'Cairo', 'Baloo Bhaijaan 2', 'Amiri', 'Arial', sans-serif;
             letter-spacing: 2px;
-            text-shadow: 2px 2px 0 #ec0a74, 4px 4px 0 #32e0e0;
+
         }
         p {
             font-size: 1.5em;
@@ -98,7 +98,7 @@ body {
         .card {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #32e0e0 60%, #fffff 100%);
+            background: #ffffff;
             border: 2px solid #ec0a74;
             color: #ec0a74;
             font-weight: bold;
@@ -196,7 +196,7 @@ body {
         .rps-btn {
             font-size: 2em;
             padding: 15px 25px;
-            background: linear-gradient(90deg, #32e0e0 60%, #fffff 100%);
+    background: #ffffff;
             color: #ec0a74;
             font-weight: bold;
             border: 2px solid #ec0a74;
@@ -211,7 +211,7 @@ body {
         }
         .surprise-btn {
             font-size: 1.7em;
-            background: linear-gradient(90deg, #ec0a74, #32e0e0);
+    background: #ec0a74;
             color: #fff;
             border: none;
             border-radius: 20px;
@@ -228,7 +228,7 @@ body {
             100% { box-shadow: 0 0 10px #ec0a74; }
         }
         .surprise-btn:hover {
-            background: linear-gradient(90deg, #32e0e0, #ec0a74);
+    background: #32e0e0;
             transform: scale(1.08);
         }
         .surprise-box {
@@ -256,3 +256,126 @@ body {
             0% { transform: translateY(0) scale(1); }
             100% { transform: translateY(-40px) scale(1.1); }
         }
+        /* Responsive Design Enhancements */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 98vw;
+    padding: 10px;
+  }
+}
+@media (max-width: 900px) {
+  .memory-game {
+    grid-template-columns: repeat(4, 60px);
+  }
+  .card {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+  }
+  .puzzle-game {
+    grid-template-columns: repeat(3, 70px);
+  }
+  .puzzle-piece {
+    width: 70px;
+    height: 70px;
+    font-size: 1.1em;
+  }
+  .tic-tac-toe {
+    grid-template-columns: repeat(3, 60px);
+  }
+  .tic-cell {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+  }
+  .rps-btn {
+    font-size: 1.2em;
+    padding: 10px 12px;
+  }
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100vw;
+  }
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+    margin: 10px 0;
+  }
+  h2 {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+  }
+  .section {
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .memory-game {
+    grid-template-columns: repeat(4, 40px);
+    gap: 5px;
+  }
+  .card {
+    width: 40px;
+    height: 40px;
+    font-size: 1em;
+  }
+  .puzzle-game {
+    grid-template-columns: repeat(3, 40px);
+    gap: 3px;
+  }
+  .puzzle-piece {
+    width: 40px;
+    height: 40px;
+    font-size: 0.8em;
+  }
+  .tic-tac-toe {
+    grid-template-columns: repeat(3, 35px);
+    gap: 3px;
+  }
+  .tic-cell {
+    width: 35px;
+    height: 35px;
+    font-size: 1em;
+  }
+  .rps-game {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .rps-btn {
+    font-size: 1em;
+    padding: 7px 8px;
+    border-radius: 8px;
+  }
+  .color-picker span {
+    width: 25px;
+    height: 25px;
+    margin: 2px;
+  }
+  .surprise-btn {
+    font-size: 1em;
+    padding: 8px 12px;
+    border-radius: 10px;
+  }
+  .surprise-box {
+    font-size: 1em;
+    min-height: 24px;
+  }
+  .fun-facts {
+    font-size: 0.9em;
+  }
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100vw;
+  }
+}
+@media (max-width: 400px) {
+  .container {
+    padding: 2px;
+  }
+  .section {
+    padding: 4px;
+  }
+}
