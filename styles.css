@@ -1,0 +1,258 @@
+body {
+            margin: 0;
+            font-family: 'Cairo', 'Amiri', 'Baloo Bhaijaan 2', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #fffff 0%, #32e0e0 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        h1 {
+            font-size: 3em;
+            color: #ec0a74;
+    font-family: 'Cairo', 'Baloo Bhaijaan 2', 'Amiri', 'Arial', sans-serif;
+            margin: 20px;
+            font-family: 'Cairo', 'Baloo Bhaijaan 2', 'Amiri', 'Arial', sans-serif;
+            letter-spacing: 2px;
+        }
+        h2 {
+            font-size: 2em;
+            color: #32e0e0;
+    font-family: 'Cairo', 'Baloo Bhaijaan 2', 'Amiri', 'Arial', sans-serif;
+            font-family: 'Cairo', 'Baloo Bhaijaan 2', 'Amiri', 'Arial', sans-serif;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 0 #ec0a74, 4px 4px 0 #32e0e0;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .section {
+            margin: 40px 0;
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 3px dashed #ec0a74;
+            animation: popSection 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        @keyframes popSection {
+            0% { transform: scale(0.8); opacity: 0; }
+            60% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+        button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: #ec0a74;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2s;
+            box-shadow: 0 4px 12px rgba(50, 224, 224, 0.15);
+            animation: bounceBtn 2s infinite alternate;
+        }
+        @keyframes bounceBtn {
+            0% { transform: scale(1); }
+            60% { transform: scale(1.08) rotate(-2deg); }
+            100% { transform: scale(1.04) rotate(2deg); }
+        }
+        button:hover {
+            background-color: #32e0e0;
+            color: #ec0a74;
+        }
+        button:active {
+            background-color: #32e0e0;
+            color: #fff;
+        }
+        canvas {
+            border: 2px solid #ec0a74;
+            border-radius: 10px;
+            background-color: white;
+        }
+        .color-picker {
+            margin: 10px;
+        }
+        .color-picker span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 5px;
+            cursor: pointer;
+            border: 2px solid #333;
+        }
+        .memory-game {
+            display: grid;
+            grid-template-columns: repeat(4, 80px);
+            gap: 10px;
+            justify-content: center;
+        }
+        .card {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #32e0e0 60%, #fffff 100%);
+            border: 2px solid #ec0a74;
+            color: #ec0a74;
+            font-weight: bold;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            cursor: pointer;
+            transition: transform 0.3s;
+            animation: popCell 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        @keyframes popCell {
+            0% { transform: scale(0.7); opacity: 0.5; }
+            80% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+        .card.flipped, .card.matched {
+            background-color: #32e0e0;
+        }
+        .card.matched {
+            opacity: 0.7;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .puzzle-game {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            gap: 5px;
+            justify-content: center;
+            margin: 20px auto;
+        }
+        .puzzle-piece {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #fffff 60%, #32e0e0 100%);
+            border: 2px solid #32e0e0;
+            color: #ec0a74;
+            font-weight: bold;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: transform 0.2s;
+            animation: popCell 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        .puzzle-piece:hover {
+            transform: scale(1.05);
+        }
+        .fun-facts {
+            font-size: 1.2em;
+            color: #ec0a74;
+            line-height: 1.6;
+        }
+        .fun-facts li {
+            margin: 10px 0;
+        }
+        .tic-tac-toe {
+            display: grid;
+            grid-template-columns: repeat(3, 80px);
+            gap: 8px;
+            justify-content: center;
+            margin: 20px auto;
+        }
+        .tic-cell {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #fffff 60%, #32e0e0 100%);
+            border: 2px solid #ec0a74;
+            color: #ec0a74;
+            font-weight: bold;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5em;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            animation: popCell 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        .tic-cell:hover {
+            background-color: #ffb6c1;
+            transform: scale(1.08);
+        }
+        .rps-game {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .rps-btn {
+            font-size: 2em;
+            padding: 15px 25px;
+            background: linear-gradient(90deg, #32e0e0 60%, #fffff 100%);
+            color: #ec0a74;
+            font-weight: bold;
+            border: 2px solid #ec0a74;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            box-shadow: 0 2px 8px #ffd70044;
+        }
+        .rps-btn:hover {
+            background: #b0e0e6;
+            transform: scale(1.1);
+        }
+        .surprise-btn {
+            font-size: 1.7em;
+            background: linear-gradient(90deg, #ec0a74, #32e0e0);
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 15px 35px;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(236, 10, 116, 0.2);
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            animation: rainbowPulse 2.5s infinite alternate;
+        }
+        @keyframes rainbowPulse {
+            0% { box-shadow: 0 0 10px #ec0a74; }
+            50% { box-shadow: 0 0 30px #32e0e0; }
+            100% { box-shadow: 0 0 10px #ec0a74; }
+        }
+        .surprise-btn:hover {
+            background: linear-gradient(90deg, #32e0e0, #ec0a74);
+            transform: scale(1.08);
+        }
+        .surprise-box {
+            margin-top: 15px;
+            font-size: 1.5em;
+            color: #ec0a74;
+            min-height: 40px;
+            font-weight: bold;
+            transition: color 0.3s;
+            animation: fadeInSurprise 0.7s;
+        }
+        @keyframes fadeInSurprise {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        /* Decorative floating shapes */
+        .floating-shape {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.18;
+            pointer-events: none;
+            animation: floatShape 8s infinite alternate ease-in-out;
+        }
+        @keyframes floatShape {
+            0% { transform: translateY(0) scale(1); }
+            100% { transform: translateY(-40px) scale(1.1); }
+        }

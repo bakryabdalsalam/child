@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منطقة المرح للأطفال</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <!-- Google Fonts for Arabic child-friendly fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Baloo+Bhaijaan+2:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>مرحبًا بكم في منطقة المرح للأطفال!</h1>
+        <p style="color: #ff69b4;">لنلعب ونستمتع معًا!</p>
+
+        <!-- Coloring Activity -->
+        <div class="section">
+            <h2>متعة التلوين</h2>
+            <p>ارسم ولوّن بألوانك المفضلة!</p>
+            <div class="color-picker">
+                <span style="background-color: red;" onclick="setColor('red')"></span>
+                <span style="background-color: blue;" onclick="setColor('blue')"></span>
+                <span style="background-color: yellow;" onclick="setColor('yellow')"></span>
+                <span style="background-color: green;" onclick="setColor('green')"></span>
+                <span style="background-color: purple;" onclick="setColor('purple')"></span>
+            </div>
+            <canvas id="canvas" width="500" height="300"></canvas>
+            <br>
+            <button onclick="clearCanvas()">مسح اللوحة</button>
+        </div>
+
+        <!-- Memory Game -->
+        <div class="section">
+            <h2>لعبة تطابق الذاكرة</h2>
+            <p>ابحث عن الأزواج المتطابقة!</p>
+            <div class="memory-game" id="memory-game"></div>
+            <button onclick="resetGame()">لعبة جديدة</button>
+        </div>
+
+        <!-- Puzzle Game -->
+        <div class="section">
+            <h2>لعبة الأحجية</h2>
+            <p>رتب الأرقام من 1 إلى 8!</p>
+            <div class="puzzle-game" id="puzzle-game"></div>
+            <button onclick="resetPuzzle()">أحجية جديدة</button>
+        </div>
+
+        <!-- Tic-Tac-Toe Game -->
+        <div class="section">
+            <h2>لعبة إكس-أو (تيك تاك تو)</h2>
+            <p>حاول أن تربح على الكمبيوتر!</p>
+            <div class="tic-tac-toe" id="tic-tac-toe"></div>
+            <button onclick="resetTicTacToe()">لعبة جديدة</button>
+        </div>
+
+        <!-- Rock Paper Scissors Game -->
+        <div class="section">
+            <h2>لعبة حجر ورقة مقص</h2>
+            <p>اختر واحدة وتحدى الكمبيوتر!</p>
+            <div class="rps-game" id="rps-game"></div>
+            <button onclick="resetRPS()">لعبة جديدة</button>
+        </div>
+
+        <!-- Surprise Button -->
+        <div class="section">
+            <button class="surprise-btn" onclick="showSurprise()">!فاجئني</button>
+            <div id="surprise-box" class="surprise-box"></div>
+        </div>
+
+        <!-- Fun Facts Section -->
+        <div class="section">
+            <h2>حقائق ممتعة للأطفال</h2>
+            <ul class="fun-facts">
+                <li>الزرافة هي أطول حيوان في العالم، يمكن أن يصل طولها إلى 18 قدمًا!</li>
+                <li>النحلة تستطيع الطيران بسرعة تصل إلى 24 كيلومترًا في الساعة!</li>
+                <li>الأخطبوط لديه ثلاثة قلوب ويمكنه تغيير لونه ليختفي!</li>
+                <li>الفيل لا ينسى أبدًا، لديه ذاكرة قوية جدًا!</li>
+            </ul>
+        </div>
+
+        <!-- Decorative floating shapes for child-friendly look -->
+        <div class="floating-shape" style="top: 30px; left: 20px; width: 80px; height: 80px; background: radial-gradient(circle, #ffd700 60%, #ff69b4 100%); border-radius: 50%;"></div>
+        <div class="floating-shape" style="top: 80px; right: 40px; width: 60px; height: 60px; background: radial-gradient(circle, #32cd32 60%, #87ceeb 100%); border-radius: 50%; animation-delay: 2s;"></div>
+        <div class="floating-shape" style="bottom: 60px; left: 60px; width: 100px; height: 100px; background: radial-gradient(circle, #ff69b4 60%, #ffd700 100%); border-radius: 50%; animation-delay: 1s;"></div>
+        <div class="floating-shape" style="bottom: 30px; right: 80px; width: 70px; height: 70px; background: radial-gradient(circle, #4682b4 60%, #b0e0e6 100%); border-radius: 50%; animation-delay: 3s;"></div>
+    </div>
+</body>
+</html>
